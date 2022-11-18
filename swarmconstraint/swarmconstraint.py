@@ -92,7 +92,7 @@ class SwarmConstraint:
     for node in allNodes:
       allNodesMap[node.id] = {
         'id' : node.id,
-        'available' :  True if node.attrs['Spec']['Availability'] == 'active' and and node.attrs['Status']['State'] == 'ready' else False,
+        'available' :  True if node.attrs['Spec']['Availability'] == 'active' and node.attrs['Status']['State'] == 'ready' else False,
         'hostname': node.attrs['Description']['Hostname'],
         'role' : node.attrs['Spec']['Role'],
         'platform' : {
