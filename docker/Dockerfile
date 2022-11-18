@@ -1,6 +1,5 @@
-FROM ubuntu:18.04
-MAINTAINER Stian Brattland <stian@octetnest.no>
-LABEL Description="swarmconstraint" Version="0.3"
+FROM ubuntu:20.04
+LABEL Description="swarmconstraint" Version="0.4"
 
 ENV TERM xterm
 
@@ -22,7 +21,7 @@ RUN apt-get install -y \
 
 RUN pip3 install docker
 
-ADD https://github.com/sbrattla/swarmconstraint/archive/0.3.tar.gz /tmp/swarmconstraint.tar.gz
+ADD https://github.com/flopon/swarmconstraint/archive/0.4.tar.gz /tmp/swarmconstraint.tar.gz
 
 RUN mkdir /opt/swarmconstraint && \
     tar --extract --file=/tmp/swarmconstraint.tar.gz --strip-components=1 --directory=/opt/swarmconstraint && \
